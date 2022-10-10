@@ -629,7 +629,7 @@ resource "aws_cloudwatch_metric_alarm" "cpu_utilization" {
   }
 }
 
-# # DatabaseConnections anomaly alarm
+# DatabaseConnections anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "database_connections" {
   count                     = length(var.replica_db_instance_id) > 0 ? 0 : 1
   actions_enabled           = var.anomaly_actions_enabled
@@ -667,7 +667,7 @@ resource "aws_cloudwatch_metric_alarm" "database_connections" {
   }
 }
 
-# # DBLoad anomaly alarm
+# DBLoad anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "db_load" {
   count                     = length(var.replica_db_instance_id) > 0 ? 0 : 1
   actions_enabled           = var.anomaly_actions_enabled
@@ -705,7 +705,7 @@ resource "aws_cloudwatch_metric_alarm" "db_load" {
   }
 }
 
-# # DBLoadCPU anomaly alarm
+# DBLoadCPU anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "db_load_cpu" {
   count                     = length(var.replica_db_instance_id) > 0 ? 0 : 1
   actions_enabled           = var.anomaly_actions_enabled
@@ -743,7 +743,7 @@ resource "aws_cloudwatch_metric_alarm" "db_load_cpu" {
   }
 }
 
-# # DBLoadNonCPU anomaly alarm
+# DBLoadNonCPU anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "db_non_load_cpu" {
   count                     = length(var.replica_db_instance_id) > 0 ? 0 : 1
   actions_enabled           = var.anomaly_actions_enabled
@@ -781,7 +781,7 @@ resource "aws_cloudwatch_metric_alarm" "db_non_load_cpu" {
   }
 }
 
-# # DiskQueueDepth anomaly alarm
+# DiskQueueDepth anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "disk_queue_depth_cpu" {
   count                     = length(var.replica_db_instance_id) > 0 ? 0 : 1
   actions_enabled           = var.anomaly_actions_enabled
@@ -819,7 +819,7 @@ resource "aws_cloudwatch_metric_alarm" "disk_queue_depth_cpu" {
   }
 }
 
-# # FreeableMemory anomaly alarm
+# FreeableMemory anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "freeable_memory" {
   count                     = length(var.replica_db_instance_id) > 0 ? 0 : 1
   actions_enabled           = var.anomaly_actions_enabled
@@ -857,7 +857,7 @@ resource "aws_cloudwatch_metric_alarm" "freeable_memory" {
   }
 }
 
-# # FreeStorageSpace anomaly alarm
+# FreeStorageSpace anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "free_storage_space" {
   count                     = length(var.replica_db_instance_id) > 0 ? 0 : 1
   actions_enabled           = var.anomaly_actions_enabled
@@ -895,7 +895,7 @@ resource "aws_cloudwatch_metric_alarm" "free_storage_space" {
   }
 }
 
-# # MaximumUsedTransactionIDs anomaly alarm
+# MaximumUsedTransactionIDs anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "maximum_used_transaction_ids" {
   count                     = length(var.replica_db_instance_id) > 0 ? 0 : 1
   actions_enabled           = var.anomaly_actions_enabled
@@ -933,7 +933,7 @@ resource "aws_cloudwatch_metric_alarm" "maximum_used_transaction_ids" {
   }
 }
 
-# # NetworkReceiveThroughput anomaly alarm
+# NetworkReceiveThroughput anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "network_receive_throughput" {
   count                     = length(var.replica_db_instance_id) > 0 ? 0 : 1
   actions_enabled           = var.anomaly_actions_enabled
@@ -971,7 +971,7 @@ resource "aws_cloudwatch_metric_alarm" "network_receive_throughput" {
   }
 }
 
-# # NetworkTransmitThroughput anomaly alarm
+# NetworkTransmitThroughput anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "network_transmit_throughput" {
   count                     = length(var.replica_db_instance_id) > 0 ? 0 : 1
   actions_enabled           = var.anomaly_actions_enabled
@@ -1009,7 +1009,7 @@ resource "aws_cloudwatch_metric_alarm" "network_transmit_throughput" {
   }
 }
 
-# # ReadIOPS anomaly alarm
+# ReadIOPS anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "read_iops" {
   count                     = length(var.replica_db_instance_id) > 0 ? 0 : 1
   actions_enabled           = var.anomaly_actions_enabled
@@ -1047,7 +1047,7 @@ resource "aws_cloudwatch_metric_alarm" "read_iops" {
   }
 }
 
-# # ReadLatency anomaly alarm
+# ReadLatency anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "read_latency" {
   count                     = length(var.replica_db_instance_id) > 0 ? 0 : 1
   actions_enabled           = var.anomaly_actions_enabled
@@ -1085,7 +1085,7 @@ resource "aws_cloudwatch_metric_alarm" "read_latency" {
   }
 }
 
-# # ReadThroughput anomaly alarm
+# ReadThroughput anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "read_throughput" {
   count                     = length(var.replica_db_instance_id) > 0 ? 0 : 1
   actions_enabled           = var.anomaly_actions_enabled
@@ -1123,7 +1123,7 @@ resource "aws_cloudwatch_metric_alarm" "read_throughput" {
   }
 }
 
-# # SwapUsage anomaly alarm
+# SwapUsage anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "swap_usage" {
   count                     = length(var.replica_db_instance_id) > 0 ? 0 : 1
   actions_enabled           = var.anomaly_actions_enabled
@@ -1161,7 +1161,7 @@ resource "aws_cloudwatch_metric_alarm" "swap_usage" {
   }
 }
 
-# # TransactionLogsGeneration anomaly alarm
+# TransactionLogsGeneration anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "transaction_logs_generation" {
   count                     = length(var.replica_db_instance_id) > 0 ? 0 : 1
   actions_enabled           = var.anomaly_actions_enabled
@@ -1199,7 +1199,7 @@ resource "aws_cloudwatch_metric_alarm" "transaction_logs_generation" {
   }
 }
 
-# # TransactionLogsDiskUsage anomaly alarm
+# TransactionLogsDiskUsage anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "transaction_logs_disk_usage" {
   count                     = length(var.replica_db_instance_id) > 0 ? 0 : 1
   actions_enabled           = var.anomaly_actions_enabled
@@ -1237,7 +1237,7 @@ resource "aws_cloudwatch_metric_alarm" "transaction_logs_disk_usage" {
   }
 }
 
-# # WriteIOPS anomaly alarm
+# WriteIOPS anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "write_iops" {
   count                     = length(var.replica_db_instance_id) > 0 ? 0 : 1
   actions_enabled           = var.anomaly_actions_enabled
@@ -1275,7 +1275,7 @@ resource "aws_cloudwatch_metric_alarm" "write_iops" {
   }
 }
 
-# # WriteLatency anomaly alarm
+# WriteLatency anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "write_latency" {
   count                     = length(var.replica_db_instance_id) > 0 ? 0 : 1
   actions_enabled           = var.anomaly_actions_enabled
@@ -1313,7 +1313,7 @@ resource "aws_cloudwatch_metric_alarm" "write_latency" {
   }
 }
 
-# # WriteThroughput anomaly alarm
+# WriteThroughput anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "write_throughput" {
   count                     = length(var.replica_db_instance_id) > 0 ? 0 : 1
   actions_enabled           = var.anomaly_actions_enabled
@@ -1394,7 +1394,7 @@ resource "aws_cloudwatch_metric_alarm" "transaction_logs_disk_usage_master" {
   }
 }
 
-# # Transaction logs disk usage is valid on both master and replica
+# Transaction logs disk usage is valid on both master and replica
 resource "aws_cloudwatch_metric_alarm" "transaction_logs_disk_usage_replica" {
   count                     = length(var.replica_db_instance_id) > 0 ? 1 : 0
   actions_enabled           = false
@@ -1432,7 +1432,7 @@ resource "aws_cloudwatch_metric_alarm" "transaction_logs_disk_usage_replica" {
   }
 }
 
-# # WriteIOPS is valid on both master and replica
+# WriteIOPS is valid on both master and replica
 resource "aws_cloudwatch_metric_alarm" "write_iops_master" {
   count                     = length(var.replica_db_instance_id) > 0 ? 1 : 0
   actions_enabled           = false
@@ -1470,7 +1470,7 @@ resource "aws_cloudwatch_metric_alarm" "write_iops_master" {
   }
 }
 
-# # WriteIOPS is valid on both master and replica
+# WriteIOPS is valid on both master and replica
 resource "aws_cloudwatch_metric_alarm" "write_iops_replica" {
   count                     = length(var.replica_db_instance_id) > 0 ? 1 : 0
   actions_enabled           = false
@@ -1509,7 +1509,7 @@ resource "aws_cloudwatch_metric_alarm" "write_iops_replica" {
 }
 
 
-# # WriteThroughput is valid on both master and replica
+# WriteThroughput is valid on both master and replica
 resource "aws_cloudwatch_metric_alarm" "write_throughput_master" {
   count                     = length(var.replica_db_instance_id) > 0 ? 1 : 0
   actions_enabled           = false
@@ -1547,7 +1547,7 @@ resource "aws_cloudwatch_metric_alarm" "write_throughput_master" {
   }
 }
 
-# # WriteThroughput is valid on both master and replica
+# WriteThroughput is valid on both master and replica
 resource "aws_cloudwatch_metric_alarm" "write_throughput_replica" {
   count                     = length(var.replica_db_instance_id) > 0 ? 1 : 0
   actions_enabled           = false
@@ -1585,7 +1585,7 @@ resource "aws_cloudwatch_metric_alarm" "write_throughput_replica" {
   }
 }
 
-# # WriteLatency is valid on both master and replica
+# WriteLatency is valid on both master and replica
 resource "aws_cloudwatch_metric_alarm" "write_latency_master" {
   count                     = length(var.replica_db_instance_id) > 0 ? 1 : 0
   actions_enabled           = false
@@ -1623,7 +1623,7 @@ resource "aws_cloudwatch_metric_alarm" "write_latency_master" {
   }
 }
 
-# # WriteLatency is valid on both master and replica
+# WriteLatency is valid on both master and replica
 resource "aws_cloudwatch_metric_alarm" "write_latency_replica" {
   count                     = length(var.replica_db_instance_id) > 0 ? 1 : 0
   actions_enabled           = false
@@ -1661,7 +1661,7 @@ resource "aws_cloudwatch_metric_alarm" "write_latency_replica" {
   }
 }
 
-# # ReadIOPS is valid on both master and replica
+# ReadIOPS is valid on both master and replica
 resource "aws_cloudwatch_metric_alarm" "read_iops_master" {
   count                     = length(var.replica_db_instance_id) > 0 ? 1 : 0
   actions_enabled           = false
@@ -1699,7 +1699,7 @@ resource "aws_cloudwatch_metric_alarm" "read_iops_master" {
   }
 }
 
-# # ReadIOPS is valid on both master and replica
+# ReadIOPS is valid on both master and replica
 resource "aws_cloudwatch_metric_alarm" "read_iops_replica" {
   count                     = length(var.replica_db_instance_id) > 0 ? 1 : 0
   actions_enabled           = false
@@ -1737,7 +1737,7 @@ resource "aws_cloudwatch_metric_alarm" "read_iops_replica" {
   }
 }
 
-# # ReadThroughput is valid on both master and replica
+# ReadThroughput is valid on both master and replica
 resource "aws_cloudwatch_metric_alarm" "read_throughput_master" {
   count                     = length(var.replica_db_instance_id) > 0 ? 1 : 0
   actions_enabled           = false
@@ -1775,7 +1775,7 @@ resource "aws_cloudwatch_metric_alarm" "read_throughput_master" {
   }
 }
 
-# # ReadThroughput is valid on both master and replica
+# ReadThroughput is valid on both master and replica
 resource "aws_cloudwatch_metric_alarm" "read_throughput_replica" {
   count                     = length(var.replica_db_instance_id) > 0 ? 1 : 0
   actions_enabled           = false
@@ -1813,7 +1813,7 @@ resource "aws_cloudwatch_metric_alarm" "read_throughput_replica" {
   }
 }
 
-# # ReadLatency is valid on both master and replica
+# ReadLatency is valid on both master and replica
 resource "aws_cloudwatch_metric_alarm" "read_latency_master" {
   count                     = length(var.replica_db_instance_id) > 0 ? 1 : 0
   actions_enabled           = false
@@ -1851,7 +1851,7 @@ resource "aws_cloudwatch_metric_alarm" "read_latency_master" {
   }
 }
 
-# # ReadLatency is valid on both master and replica
+# ReadLatency is valid on both master and replica
 resource "aws_cloudwatch_metric_alarm" "read_latency_replica" {
   count                     = length(var.replica_db_instance_id) > 0 ? 1 : 0
   actions_enabled           = false
@@ -1929,7 +1929,7 @@ resource "aws_cloudwatch_metric_alarm" "db_load_cpu_master" {
   }
 }
 
-# # DBLoadCPU replica anomaly alarm
+# DBLoadCPU replica anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "db_load_cpu_replica" {
   count                     = length(var.replica_db_instance_id) > 0 ? 1 : 0
   actions_enabled           = var.anomaly_actions_enabled
@@ -1967,7 +1967,7 @@ resource "aws_cloudwatch_metric_alarm" "db_load_cpu_replica" {
   }
 }
 
-# # DBLoadNonCPU replica anomaly alarm
+# DBLoadNonCPU replica anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "db_load_non_cpu_master" {
   count                     = length(var.replica_db_instance_id) > 0 ? 1 : 0
   actions_enabled           = var.anomaly_actions_enabled
@@ -2005,7 +2005,7 @@ resource "aws_cloudwatch_metric_alarm" "db_load_non_cpu_master" {
   }
 }
 
-# # DBLoadNonCPU replica anomaly alarm
+# DBLoadNonCPU replica anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "db_load_non_cpu_replica" {
   count                     = length(var.replica_db_instance_id) > 0 ? 1 : 0
   actions_enabled           = var.anomaly_actions_enabled
@@ -2043,7 +2043,7 @@ resource "aws_cloudwatch_metric_alarm" "db_load_non_cpu_replica" {
   }
 }
 
-# # DBLoad master anomaly alarm
+# DBLoad master anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "db_load_master" {
   count                     = length(var.replica_db_instance_id) > 0 ? 1 : 0
   actions_enabled           = var.anomaly_actions_enabled
@@ -2081,7 +2081,7 @@ resource "aws_cloudwatch_metric_alarm" "db_load_master" {
   }
 }
 
-# # DBLoad replica anomaly alarm
+# DBLoad replica anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "db_load_replica" {
   count                     = length(var.replica_db_instance_id) > 0 ? 1 : 0
   actions_enabled           = var.anomaly_actions_enabled
@@ -2119,7 +2119,7 @@ resource "aws_cloudwatch_metric_alarm" "db_load_replica" {
   }
 }
 
-# # CheckpointLag master anomaly alarm
+# CheckpointLag master anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "checkpoint_lag_master" {
   count                     = length(var.replica_db_instance_id) > 0 ? 1 : 0
   actions_enabled           = var.anomaly_actions_enabled
@@ -2157,7 +2157,7 @@ resource "aws_cloudwatch_metric_alarm" "checkpoint_lag_master" {
   }
 }
 
-# # CheckpointLag replica anomaly alarm
+# CheckpointLag replica anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "checkpoint_lag_replica" {
   count                     = length(var.replica_db_instance_id) > 0 ? 1 : 0
   actions_enabled           = var.anomaly_actions_enabled
@@ -2195,7 +2195,7 @@ resource "aws_cloudwatch_metric_alarm" "checkpoint_lag_replica" {
   }
 }
 
-# # OldestReplicationSlotLag master anomaly alarm
+# OldestReplicationSlotLag master anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "oldest_replication_slot_lag_master" {
   count                     = length(var.replica_db_instance_id) > 0 ? 1 : 0
   actions_enabled           = var.anomaly_actions_enabled
@@ -2233,7 +2233,7 @@ resource "aws_cloudwatch_metric_alarm" "oldest_replication_slot_lag_master" {
   }
 }
 
-# # OldestReplicationSlotLag replica anomaly alarm
+# OldestReplicationSlotLag replica anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "oldest_replication_slot_lag_replica" {
   count                     = length(var.replica_db_instance_id) > 0 ? 1 : 0
   actions_enabled           = var.anomaly_actions_enabled
@@ -2271,7 +2271,7 @@ resource "aws_cloudwatch_metric_alarm" "oldest_replication_slot_lag_replica" {
   }
 }
 
-# # DatabaseConnections master anomaly alarm
+# DatabaseConnections master anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "database_connections_master" {
   count                     = length(var.replica_db_instance_id) > 0 ? 1 : 0
   actions_enabled           = var.anomaly_actions_enabled
@@ -2309,7 +2309,7 @@ resource "aws_cloudwatch_metric_alarm" "database_connections_master" {
   }
 }
 
-# # DatabaseConnections replica anomaly alarm
+# DatabaseConnections replica anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "database_connections_replica" {
   count                     = length(var.replica_db_instance_id) > 0 ? 1 : 0
   actions_enabled           = var.anomaly_actions_enabled
@@ -2347,7 +2347,7 @@ resource "aws_cloudwatch_metric_alarm" "database_connections_replica" {
   }
 }
 
-# # FreeableMemory master anomaly alarm
+# FreeableMemory master anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "freeable_memory_master" {
   count                     = length(var.replica_db_instance_id) > 0 ? 1 : 0
   actions_enabled           = var.anomaly_actions_enabled
@@ -2385,7 +2385,7 @@ resource "aws_cloudwatch_metric_alarm" "freeable_memory_master" {
   }
 }
 
-# # FreeableMemory replica anomaly alarm
+# FreeableMemory replica anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "freeable_memory_replica" {
   count                     = length(var.replica_db_instance_id) > 0 ? 1 : 0
   actions_enabled           = var.anomaly_actions_enabled
@@ -2423,7 +2423,7 @@ resource "aws_cloudwatch_metric_alarm" "freeable_memory_replica" {
   }
 }
 
-# # SwapUsage master anomaly alarm
+# SwapUsage master anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "swap_usage_master" {
   count                     = length(var.replica_db_instance_id) > 0 ? 1 : 0
   actions_enabled           = var.anomaly_actions_enabled
@@ -2461,7 +2461,7 @@ resource "aws_cloudwatch_metric_alarm" "swap_usage_master" {
   }
 }
 
-# # SwapUsage replica anomaly alarm
+# SwapUsage replica anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "swap_usage_replica" {
   count                     = length(var.replica_db_instance_id) > 0 ? 1 : 0
   actions_enabled           = var.anomaly_actions_enabled
@@ -2499,7 +2499,7 @@ resource "aws_cloudwatch_metric_alarm" "swap_usage_replica" {
   }
 }
 
-# # FreeStorageSpace master anomaly alarm
+# FreeStorageSpace master anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "free_storage_space_master" {
   count                     = length(var.replica_db_instance_id) > 0 ? 1 : 0
   actions_enabled           = var.anomaly_actions_enabled
@@ -2537,7 +2537,7 @@ resource "aws_cloudwatch_metric_alarm" "free_storage_space_master" {
   }
 }
 
-# # FreeStorageSpace replica anomaly alarm
+# FreeStorageSpace replica anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "free_storage_space_replica" {
   count                     = length(var.replica_db_instance_id) > 0 ? 1 : 0
   actions_enabled           = var.anomaly_actions_enabled
@@ -2575,7 +2575,7 @@ resource "aws_cloudwatch_metric_alarm" "free_storage_space_replica" {
   }
 }
 
-# # DiskQueueDepth master anomaly alarm
+# DiskQueueDepth master anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "disk_queue_depth_master" {
   count                     = length(var.replica_db_instance_id) > 0 ? 1 : 0
   actions_enabled           = var.anomaly_actions_enabled
@@ -2613,7 +2613,7 @@ resource "aws_cloudwatch_metric_alarm" "disk_queue_depth_master" {
   }
 }
 
-# # DiskQueueDepth replica anomaly alarm
+# DiskQueueDepth replica anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "disk_queue_depth_replica" {
   count                     = length(var.replica_db_instance_id) > 0 ? 1 : 0
   actions_enabled           = var.anomaly_actions_enabled
@@ -2651,7 +2651,7 @@ resource "aws_cloudwatch_metric_alarm" "disk_queue_depth_replica" {
   }
 }
 
-# # NetworkTransmitThroughput master anomaly alarm
+# NetworkTransmitThroughput master anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "network_transmit_throughput_master" {
   count                     = length(var.replica_db_instance_id) > 0 ? 1 : 0
   actions_enabled           = var.anomaly_actions_enabled
@@ -2689,7 +2689,7 @@ resource "aws_cloudwatch_metric_alarm" "network_transmit_throughput_master" {
   }
 }
 
-# # NetworkTransmitThroughput replica anomaly alarm
+# NetworkTransmitThroughput replica anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "network_transmit_throughput_replica" {
   count                     = length(var.replica_db_instance_id) > 0 ? 1 : 0
   actions_enabled           = var.anomaly_actions_enabled
@@ -2727,7 +2727,7 @@ resource "aws_cloudwatch_metric_alarm" "network_transmit_throughput_replica" {
   }
 }
 
-# # NetworkReceiveThroughput master anomaly alarm
+# NetworkReceiveThroughput master anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "network_receive_throughput_master" {
   count                     = length(var.replica_db_instance_id) > 0 ? 1 : 0
   actions_enabled           = var.anomaly_actions_enabled
@@ -2765,7 +2765,7 @@ resource "aws_cloudwatch_metric_alarm" "network_receive_throughput_master" {
   }
 }
 
-# # NetworkReceiveThroughput replica anomaly alarm
+# NetworkReceiveThroughput replica anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "network_receive_throughput_replica" {
   count                     = length(var.replica_db_instance_id) > 0 ? 1 : 0
   actions_enabled           = var.anomaly_actions_enabled
@@ -2803,7 +2803,7 @@ resource "aws_cloudwatch_metric_alarm" "network_receive_throughput_replica" {
   }
 }
 
-# # TransactionLogsGeneration master anomaly alarm
+# TransactionLogsGeneration master anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "transaction_logs_generation_master" {
   count                     = length(var.replica_db_instance_id) > 0 ? 1 : 0
   actions_enabled           = var.anomaly_actions_enabled
@@ -2841,7 +2841,7 @@ resource "aws_cloudwatch_metric_alarm" "transaction_logs_generation_master" {
   }
 }
 
-# # TransactionLogsGeneration replica anomaly alarm
+# TransactionLogsGeneration replica anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "transaction_logs_generation_replica" {
   count                     = length(var.replica_db_instance_id) > 0 ? 1 : 0
   actions_enabled           = var.anomaly_actions_enabled

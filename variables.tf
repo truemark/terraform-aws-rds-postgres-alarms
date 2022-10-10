@@ -43,7 +43,7 @@ variable "db_connections_threshold" {
 variable "db_instance_id" {
   description = "The instance ID of the RDS database instance that you want to monitor."
   type        = string
-  default     = ""
+  # default     = ""
 }
 
 variable "db_load_cpu_evaluation_periods" {
@@ -147,18 +147,6 @@ variable "oldest_replication_slot_lag_evaluation_periods" {
   type        = number
   default     = 10
 }
-
-# variable "percent_free_memory_evaluation_periods" {
-#   description = "The number of periods threshold must be breached to alarm."
-#   type        = number
-#   default     = 10
-# }
-
-# variable "percent_free_memory_threshold" {
-#   description = "The percent of memory that is unused."
-#   type        = number
-#   default     = 10
-# }
 
 variable "read_iops_evaluation_periods" {
   description = "The number of periods threshold must be breached to alarm."
