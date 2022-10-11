@@ -4,6 +4,27 @@ data "aws_sns_topic" "topic" {
 }
 
 #------------------------------------------------------------------------------
+# Generate an rds instance event sub that publishes to the sns topic.
+resource "aws_db_event_subscription" "instance_sub" {
+  name      = "${var.db_instance_id}-instances"
+  sns_topic = data.aws_sns_topic.topic.arn
+  source_type = "db-instance"
+  source_ids = [var.db_instance_id]
+  event_categories = [
+    "availability",
+    "deletion",
+    "failover",
+    "failure",
+    "low storage",
+    "maintenance",
+    "notification",
+    "read replica",
+    "recovery",
+    "restoration",
+  ]
+  tags = var.tags
+}
+#------------------------------------------------------------------------------
 # Single Instance master threshold alarms
 resource "aws_cloudwatch_metric_alarm" "master_cpu_utilization_high" {
   alarm_name                = "${var.db_instance_id}_cpu_utilization_high_static"
