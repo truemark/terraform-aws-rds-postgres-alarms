@@ -28,6 +28,486 @@ variable "cpu_utilization_threshold" {
   default     = 90
 }
 
+variable "create_anomaly_alarms" {
+  description = "Toggle to turn off all anomaly alarms."
+  type        = bool
+  default     = true
+}
+
+variable "create_master_checkpoint_lag_anomaly_alarm" {
+  description = "Toggle to create <alarm name>"
+  type        = bool
+  default     = true
+}
+
+variable "create_master_checkpoint_lag_high_alarm" {
+  description = "Toggle to create <alarm name>"
+  type        = bool
+  default     = true
+}
+
+variable "create_master_cpu_utilization_anomaly_alarm" {
+  description = "Toggle to create master_cpu_utilization_anomaly alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_master_cpu_utilization_high_alarm" {
+  description = "Toggle to create master_cpu_utilization_high alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_master_db_connections_anomaly_alarm" {
+  description = "Toggle to create <alarm name>"
+  type        = bool
+  default     = true
+}
+
+variable "create_master_db_connections_high_alarm" {
+  description = "Toggle to create master_db_connections_high alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_master_db_load_anomaly_alarm" {
+  description = "Toggle to create master_db_load_anomaly alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_master_db_load_high_alarm" {
+  description = "Toggle to create master_db_load_high alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_master_db_load_cpu_anomaly_alarm" {
+  description = "Toggle to create master_db_load_cpu_anomaly alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_master_db_load_cpu_high_alarm" {
+  description = "Toggle to create master_db_load_cpu_high alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_master_db_load_non_cpu_anomaly_alarm" {
+  description = "Toggle to create master_db_load_non_cpu_anomaly alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_master_db_load_non_cpu_high_alarm" {
+  description = "Toggle to create master_db_load_non_cpu_high alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_master_disk_queue_depth_anomaly_alarm" {
+  description = "Toggle to create master_disk_queue_depth_anomaly alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_master_disk_queue_depth_high_alarm" {
+  description = "Toggle to create disk_queue_depth_high alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_master_free_storage_space_anomaly_alarm" {
+  description = "Toggle to create master_free_storage_space_anomaly alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_master_free_storage_space_low_alarm" {
+  description = "Toggle to create master_free_storage_space_low alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_master_freeable_memory_anomaly_alarm" {
+  description = "Toggle to create master_freeable_memory_anomaly alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_master_freeable_memory_low_alarm" {
+  description = "Toggle to create master_freeable_memory_low alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_master_local_storage_pct_low_alarm" {
+  description = "Toggle to create master_local_storage_pct_low alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_master_maximum_used_transaction_ids_high_alarm" {
+  description = "Toggle to create maximum_used_transaction_ids_high alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_master_network_receive_throughput_anomaly_alarm" {
+  description = "Toggle to create master_network_receive_throughput_anomaly alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_master_network_transmit_throughput_anomaly_alarm" {
+  description = "Toggle to create master_network_transmit_throughput_anomaly alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_master_oldest_replication_slot_lag_anomaly_alarm" {
+  description = "Toggle to createmaster_oldest_replication_slot_lag_anomaly alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_master_read_iops_anomaly_alarm" {
+  description = "Toggle to create master_read_iops_anomaly alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_master_read_iops_high_alarm" {
+  description = "Toggle to create master_read_iops_high_alarm alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_master_read_latency_anomaly_alarm" {
+  description = "Toggle to create _master_read_latency_anomaly_alarm alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_master_read_latency_high_alarm" {
+  description = "Toggle to create master_read_latency_high alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_master_read_throughput_anomaly_alarm" {
+  description = "Toggle to create master_read_throughput_anomaly alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_master_swap_usage_anomaly_alarm" {
+  description = "Toggle to create master_swap_usage_anomaly alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_master_swap_usage_high_alarm" {
+  description = "Toggle to create master_swap_usage_high alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_master_transaction_logs_disk_usage_high_alarm" {
+  description = "Toggle to create master_transaction_logs_disk_usage_high alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_master_transaction_logs_generation_anomaly_alarm" {
+  description = "Toggle to create master_transaction_logs_generation_anomaly alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_master_transaction_logs_generation_high_alarm" {
+  description = "Toggle to create master_transaction_logs_generation_high alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_master_write_iops_anomaly_alarm" {
+  description = "Toggle to create master_write_iops_anomaly alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_master_write_iops_high_alarm" {
+  description = "Toggle to create master_write_iops_high alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_master_write_latency_anomaly_alarm" {
+  description = "Toggle to create master_write_latency_anomaly alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_master_write_latency_high_alarm" {
+  description = "Toggle to create master_write_latency_high alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_master_write_throughput_anomaly_alarm" {
+  description = "Toggle to create master_write_throughput_anomaly alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_replica_checkpoint_lag_anomaly_alarm" {
+  description = "Toggle to create replica_checkpoint_lag_anomaly alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_replica_checkpoint_lag_high_alarm" {
+  description = "Toggle to create replica_checkpoint_lag_high alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_replica_cpu_utilization_high_alarm" {
+  description = "Toggle to create replica_cpu_utilization_high alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_replica_cpu_utilization_anomaly_alarm" {
+  description = "Toggle to create replica_cpu_utilization_anomaly alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_replica_db_connections_anomaly_alarm" {
+  description = "Toggle to create replica_db_connections_anomaly alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_replica_db_connections_high_alarm" {
+  description = "Toggle to create replica_db_connections_high alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_replica_db_load_anomaly_alarm" {
+  description = "Toggle to create replica_db_load_anomaly alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_replica_db_load_cpu_anomaly_alarm" {
+  description = "Toggle to create replica_db_load_cpu_anomaly alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_replica_db_load_high_alarm" {
+  description = "Toggle to create replica_db_load_high alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_replica_db_load_non_cpu_anomaly_alarm" {
+  description = "Toggle to create eplica_db_load_non_cpu_anomaly alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_replica_db_non_load_cpu_anomaly_alarm" {
+  description = "Toggle to create replica_db_non_load_cpu_anomaly alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_replica_disk_queue_depth_anomaly_alarm" {
+  description = "Toggle to create replica_disk_queue_depth_anomaly alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_replica_disk_queue_depth_high_alarm" {
+  description = "Toggle to create replica_disk_queue_depth_high alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_replica_free_storage_space_anomaly_alarm" {
+  description = "Toggle to create replica_free_storage_space_anomaly alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_replica_free_storage_space_low_alarm" {
+  description = "Toggle to create replica_free_storage_space_low alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_replica_freeable_memory_anomaly_alarm" {
+  description = "Toggle to create replica_freeable_memory_anomaly alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_replica_freeable_memory_low_alarm" {
+  description = "Toggle to create replica_freeable_memory_low alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_replica_lag_high_alarm" {
+  description = "Toggle to create replica_lag_high alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_replica_local_storage_pct_low_alarm" {
+  description = "Toggle to create replica_local_storage_pct_low alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_replica_maximum_used_transaction_ids_anomaly_alarm" {
+  description = "Toggle to create replica_maximum_used_transaction_ids_anomaly alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_replica_maximum_used_transaction_ids_high_alarm" {
+  description = "Toggle to create replica_maximum_used_transaction_ids_high alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_replica_network_receive_throughput_anomaly_alarm" {
+  description = "Toggle to create replica_network_receive_throughput_anomaly alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_replica_network_transmit_throughput_anomaly_alarm" {
+  description = "Toggle to create replica_network_transmit_throughput_anomaly alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_replica_oldest_replication_slot_lag_anomaly_alarm" {
+  description = "Toggle to create replica_oldest_replication_slot_lag_anomaly alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_replica_read_iops_anomaly_alarm" {
+  description = "Toggle to create replica_read_iops_anomaly alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_replica_read_iops_high_alarm" {
+  description = "Toggle to create replica_read_iops_high alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_replica_read_latency_anomaly_alarm" {
+  description = "Toggle to create replica_read_latency_anomaly alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_replica_read_latency_high_alarm" {
+  description = "Toggle to create replica_read_latency_high alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_replica_read_throughput_anomaly_alarm" {
+  description = "Toggle to create replica_read_throughput_anomaly alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_replica_read_throughput_high_alarm" {
+  description = "Toggle to create replica_read_throughput_high alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_replica_swap_usage_anomaly_alarm" {
+  description = "Toggle to create replica_swap_usage_anomaly alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_replica_swap_usage_high_alarm" {
+  description = "Toggle to create replica_swap_usage_high alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_replica_transaction_logs_disk_usage_anomaly_alarm" {
+  description = "Toggle to create replica_transaction_logs_disk_usage_anomaly alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_replica_transaction_logs_disk_usage_high_alarm" {
+  description = "Toggle to create replica_transaction_logs_disk_usage_high alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_replica_transaction_logs_generation_anomaly_alarm" {
+  description = "Toggle to create replica_transaction_logs_generation_anomaly alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_replica_transaction_logs_generation_high_alarm" {
+  description = "Toggle to create replica_transaction_logs_generation_high alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_replica_write_iops_anomaly_alarm" {
+  description = "Toggle to create replica_write_iops_anomaly alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_replica_write_iops_high_alarm" {
+  description = "Toggle to create replica_write_iops_high alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_replica_write_latency_anomaly_alarm" {
+  description = "Toggle to create replica_write_latency_anomaly alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_replica_write_latency_high_alarm" {
+  description = "Toggle to create replica_write_latency_high alarm."
+  type        = bool
+  default     = true
+}
+
+variable "create_replica_write_throughput_anomaly_alarm" {
+  description = "Toggle to create replica_write_throughput_anomaly alarm."
+  type        = bool
+  default     = true
+}
+
 variable "db_connections_evaluation_periods" {
   description = "The number of periods threshold must be breached to alarm."
   type        = number
@@ -43,13 +523,18 @@ variable "db_connections_threshold" {
 variable "db_instance_id" {
   description = "The instance ID of the RDS database instance that you want to monitor."
   type        = string
-  # default     = ""
 }
 
 variable "db_load_cpu_evaluation_periods" {
   description = "The number of periods threshold must be breached to alarm."
   type        = number
   default     = 10
+}
+
+variable "db_load_cpu_threshold" {
+  description = "The load the cpu must exceed to breach alarm."
+  type        = number
+  default     = 90
 }
 
 variable "db_load_evaluation_periods" {
@@ -64,6 +549,18 @@ variable "db_load_non_cpu_evaluation_periods" {
   default     = 10
 }
 
+variable "db_load_non_cpu_threshold" {
+  description = "The value non cpu load must exceed to breach alarm."
+  type        = number
+  default     = 90
+}
+
+variable "db_load_threshold" {
+  description = "The load the db must exceed to breach alarm."
+  type        = number
+  default     = 90
+}
+
 variable "disk_queue_depth_evaluation_periods" {
   description = "The number of periods threshold must be breached to alarm."
   type        = number
@@ -74,12 +571,6 @@ variable "disk_queue_depth_threshold" {
   description = "The maximum number of outstanding IOs (read/write requests) waiting to access the disk."
   type        = number
   default     = 100
-}
-
-variable "env" {
-  description = "The environment to alert on. Controls OpsGenie endpoint assignment."
-  type        = string
-  default     = ""
 }
 
 variable "free_storage_space_evaluation_periods" {
@@ -271,4 +762,10 @@ variable "write_throughput_evaluation_periods" {
   description = "The number of periods threshold must be breached to alarm."
   type        = number
   default     = 10
+}
+
+variable "write_throughput_threshold" {
+  description = "The threshold value that must be exceeded to alarm."
+  type        = number
+  default     = 1000
 }
