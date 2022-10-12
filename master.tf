@@ -6,7 +6,7 @@ resource "aws_cloudwatch_metric_alarm" "master_cpu_utilization_high" {
   comparison_operator       = "GreaterThanThreshold"
   evaluation_periods        = local.thresholds["CPUUtilizationEvaluationPeriods"]
   metric_name               = "CPUUtilization"
-  namespace                 = "AWS/RDS"
+  namespace                 = local.cloudwatch_namespace
   period                    = "60"
   statistic                 = "Average"
   threshold                 = local.thresholds["CPUUtilizationThreshold"]
@@ -27,7 +27,7 @@ resource "aws_cloudwatch_metric_alarm" "master_db_connections_high" {
   comparison_operator       = "GreaterThanThreshold"
   evaluation_periods        = local.thresholds["DatabaseConnectionsEvaluationPeriods"]
   metric_name               = "DatabaseConnections"
-  namespace                 = "AWS/RDS"
+  namespace                 = local.cloudwatch_namespace
   period                    = "60"
   statistic                 = "Average"
   threshold                 = local.thresholds["DatabaseConnectionsThreshold"]
@@ -48,7 +48,7 @@ resource "aws_cloudwatch_metric_alarm" "master_disk_queue_depth_high" {
   comparison_operator       = "GreaterThanThreshold"
   evaluation_periods        = local.thresholds["DiskQueueDepthEvaluationPeriods"]
   metric_name               = "DiskQueueDepth"
-  namespace                 = "AWS/RDS"
+  namespace                 = local.cloudwatch_namespace
   period                    = "60"
   statistic                 = "Average"
   threshold                 = local.thresholds["DiskQueueDepthThreshold"]
@@ -69,7 +69,7 @@ resource "aws_cloudwatch_metric_alarm" "master_freeable_memory_low" {
   comparison_operator       = "LessThanThreshold"
   evaluation_periods        = local.thresholds["FreeableMemoryEvaluationPeriods"]
   metric_name               = "FreeableMemory"
-  namespace                 = "AWS/RDS"
+  namespace                 = local.cloudwatch_namespace
   period                    = "60"
   statistic                 = "Average"
   threshold                 = local.thresholds["FreeableMemoryThreshold"]
@@ -90,7 +90,7 @@ resource "aws_cloudwatch_metric_alarm" "master_free_storage_space_low" {
   comparison_operator = "LessThanThreshold"
   evaluation_periods  = local.thresholds["FreeStorageSpaceEvaluationPeriods"]
   metric_name         = "FreeStorageSpace"
-  namespace           = "AWS/RDS"
+  namespace           = local.cloudwatch_namespace
   period              = "60"
   statistic           = "Average"
   threshold           = local.thresholds["FreeStorageSpaceThreshold"]
@@ -109,7 +109,7 @@ resource "aws_cloudwatch_metric_alarm" "master_swap_usage_high" {
   comparison_operator       = "GreaterThanThreshold"
   evaluation_periods        = local.thresholds["SwapUsageEvaluationPeriods"]
   metric_name               = "SwapUsage"
-  namespace                 = "AWS/RDS"
+  namespace                 = local.cloudwatch_namespace
   period                    = "60"
   statistic                 = "Average"
   threshold                 = local.thresholds["SwapUsageThreshold"]
@@ -151,7 +151,7 @@ resource "aws_cloudwatch_metric_alarm" "master_checkpoint_lag_high" {
   comparison_operator       = "GreaterThanThreshold"
   evaluation_periods        = local.thresholds["CheckpointLagEvaluationPeriods"]
   metric_name               = "CheckpointLag"
-  namespace                 = "AWS/RDS"
+  namespace                 = local.cloudwatch_namespace
   period                    = "60"
   statistic                 = "Average"
   threshold                 = local.thresholds["CheckpointLagThreshold"]
@@ -172,7 +172,7 @@ resource "aws_cloudwatch_metric_alarm" "master_read_iops_high" {
   comparison_operator       = "GreaterThanThreshold"
   evaluation_periods        = local.thresholds["ReadIOPSEvaluationPeriods"]
   metric_name               = "ReadIOPS"
-  namespace                 = "AWS/RDS"
+  namespace                 = local.cloudwatch_namespace
   period                    = "60"
   statistic                 = "Average"
   threshold                 = local.thresholds["ReadIOPSThreshold"]
@@ -193,7 +193,7 @@ resource "aws_cloudwatch_metric_alarm" "master_write_iops_high" {
   comparison_operator       = "GreaterThanThreshold"
   evaluation_periods        = local.thresholds["WriteIOPSEvaluationPeriods"]
   metric_name               = "WriteIOPS"
-  namespace                 = "AWS/RDS"
+  namespace                 = local.cloudwatch_namespace
   period                    = "60"
   statistic                 = "Average"
   threshold                 = local.thresholds["WriteIOPSThreshold"]
@@ -214,7 +214,7 @@ resource "aws_cloudwatch_metric_alarm" "master_read_latency_high" {
   comparison_operator       = "GreaterThanThreshold"
   evaluation_periods        = local.thresholds["ReadLatencyEvaluationPeriods"]
   metric_name               = "ReadLatency"
-  namespace                 = "AWS/RDS"
+  namespace                 = local.cloudwatch_namespace
   period                    = "60"
   statistic                 = "Average"
   threshold                 = local.thresholds["ReadLatencyThreshold"]
@@ -235,7 +235,7 @@ resource "aws_cloudwatch_metric_alarm" "master_write_latency_high" {
   comparison_operator       = "GreaterThanThreshold"
   evaluation_periods        = local.thresholds["WriteLatencyEvaluationPeriods"]
   metric_name               = "WriteLatency"
-  namespace                 = "AWS/RDS"
+  namespace                 = local.cloudwatch_namespace
   period                    = "60"
   statistic                 = "Average"
   threshold                 = local.thresholds["WriteLatencyThreshold"]
@@ -256,7 +256,7 @@ resource "aws_cloudwatch_metric_alarm" "master_transaction_logs_disk_usage_high"
   comparison_operator       = "GreaterThanThreshold"
   evaluation_periods        = local.thresholds["TransactionLogsDiskUsageEvaluationPeriods"]
   metric_name               = "TransactionLogsDiskUsage"
-  namespace                 = "AWS/RDS"
+  namespace                 = local.cloudwatch_namespace
   period                    = "60"
   statistic                 = "Average"
   threshold                 = local.thresholds["TransactionLogsDiskUsageThreshold"]
@@ -278,7 +278,7 @@ resource "aws_cloudwatch_metric_alarm" "master_transaction_logs_generation_high"
   comparison_operator       = "GreaterThanThreshold"
   evaluation_periods        = local.thresholds["TransactionLogsGenerationEvaluationPeriods"]
   metric_name               = "TransactionLogsGeneration"
-  namespace                 = "AWS/RDS"
+  namespace                 = local.cloudwatch_namespace
   period                    = "60"
   statistic                 = "Average"
   threshold                 = local.thresholds["TransactionLogsGenerationThreshold"]
@@ -299,7 +299,7 @@ resource "aws_cloudwatch_metric_alarm" "master_maximum_used_transaction_ids_high
   comparison_operator       = "GreaterThanThreshold"
   evaluation_periods        = local.thresholds["MaximumUsedTransactionIDsEvaluationPeriods"]
   metric_name               = "MaximumUsedTransactionIDs"
-  namespace                 = "AWS/RDS"
+  namespace                 = local.cloudwatch_namespace
   period                    = "60"
   statistic                 = "Average"
   threshold                 = local.thresholds["MaximumUsedTransactionIDsThreshold"]
@@ -317,7 +317,6 @@ resource "aws_cloudwatch_metric_alarm" "master_maximum_used_transaction_ids_high
 #------------------------------------------------------------------------------
 # Single Instance anomaly alarms.
 # https://aws.amazon.com/blogs/database/best-practices-for-amazon-rds-postgresql-replication/
-
 
 # WriteIOPS is valid on both master and replica
 resource "aws_cloudwatch_metric_alarm" "master_write_iops" {
@@ -346,7 +345,7 @@ resource "aws_cloudwatch_metric_alarm" "master_write_iops" {
     return_data = "true"
     metric {
       metric_name = "WriteIOPS"
-      namespace   = "AWS/RDS"
+      namespace   = local.cloudwatch_namespace
       period      = "60"
       stat        = "Maximum"
 
@@ -356,8 +355,6 @@ resource "aws_cloudwatch_metric_alarm" "master_write_iops" {
     }
   }
 }
-
-
 
 # WriteThroughput is valid on both master and replica
 resource "aws_cloudwatch_metric_alarm" "master_write_throughput" {
@@ -386,7 +383,7 @@ resource "aws_cloudwatch_metric_alarm" "master_write_throughput" {
     return_data = "true"
     metric {
       metric_name = "WriteThroughput"
-      namespace   = "AWS/RDS"
+      namespace   = local.cloudwatch_namespace
       period      = "60"
       stat        = "Maximum"
 
@@ -396,8 +393,6 @@ resource "aws_cloudwatch_metric_alarm" "master_write_throughput" {
     }
   }
 }
-
-
 
 # WriteLatency is valid on both master and replica
 resource "aws_cloudwatch_metric_alarm" "master_write_latency" {
@@ -426,7 +421,7 @@ resource "aws_cloudwatch_metric_alarm" "master_write_latency" {
     return_data = "true"
     metric {
       metric_name = "WriteLatency"
-      namespace   = "AWS/RDS"
+      namespace   = local.cloudwatch_namespace
       period      = "60"
       stat        = "Maximum"
 
@@ -464,7 +459,7 @@ resource "aws_cloudwatch_metric_alarm" "master_read_iops" {
     return_data = "true"
     metric {
       metric_name = "ReadIOPS"
-      namespace   = "AWS/RDS"
+      namespace   = local.cloudwatch_namespace
       period      = "60"
       stat        = "Maximum"
 
@@ -474,7 +469,6 @@ resource "aws_cloudwatch_metric_alarm" "master_read_iops" {
     }
   }
 }
-
 
 # ReadThroughput is valid on both master and replica
 resource "aws_cloudwatch_metric_alarm" "master_read_throughput" {
@@ -503,7 +497,7 @@ resource "aws_cloudwatch_metric_alarm" "master_read_throughput" {
     return_data = "true"
     metric {
       metric_name = "ReadThroughput"
-      namespace   = "AWS/RDS"
+      namespace   = local.cloudwatch_namespace
       period      = "60"
       stat        = "Maximum"
 
@@ -541,7 +535,7 @@ resource "aws_cloudwatch_metric_alarm" "master_read_latency" {
     return_data = "true"
     metric {
       metric_name = "ReadLatency"
-      namespace   = "AWS/RDS"
+      namespace   = local.cloudwatch_namespace
       period      = "60"
       stat        = "Maximum"
 
@@ -579,7 +573,7 @@ resource "aws_cloudwatch_metric_alarm" "master_db_load_cpu" {
     return_data = "true"
     metric {
       metric_name = "DBLoadCPU"
-      namespace   = "AWS/RDS"
+      namespace   = local.cloudwatch_namespace
       period      = "60"
       stat        = "Maximum"
 
@@ -589,7 +583,6 @@ resource "aws_cloudwatch_metric_alarm" "master_db_load_cpu" {
     }
   }
 }
-
 
 # DBLoadNonCPU replica anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "master_db_load_non_cpu" {
@@ -618,7 +611,7 @@ resource "aws_cloudwatch_metric_alarm" "master_db_load_non_cpu" {
     return_data = "true"
     metric {
       metric_name = "DBLoadNonCPU"
-      namespace   = "AWS/RDS"
+      namespace   = local.cloudwatch_namespace
       period      = "60"
       stat        = "Maximum"
 
@@ -628,7 +621,6 @@ resource "aws_cloudwatch_metric_alarm" "master_db_load_non_cpu" {
     }
   }
 }
-
 
 # DBLoad master anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "master_db_load" {
@@ -657,7 +649,7 @@ resource "aws_cloudwatch_metric_alarm" "master_db_load" {
     return_data = "true"
     metric {
       metric_name = "DBLoad"
-      namespace   = "AWS/RDS"
+      namespace   = local.cloudwatch_namespace
       period      = "60"
       stat        = "Maximum"
 
@@ -667,7 +659,6 @@ resource "aws_cloudwatch_metric_alarm" "master_db_load" {
     }
   }
 }
-
 
 # CheckpointLag master anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "master_checkpoint_lag" {
@@ -696,7 +687,7 @@ resource "aws_cloudwatch_metric_alarm" "master_checkpoint_lag" {
     return_data = "true"
     metric {
       metric_name = "CheckpointLag"
-      namespace   = "AWS/RDS"
+      namespace   = local.cloudwatch_namespace
       period      = "60"
       stat        = "Maximum"
 
@@ -734,7 +725,7 @@ resource "aws_cloudwatch_metric_alarm" "master_cpu_utilization_anomaly" {
     return_data = "true"
     metric {
       metric_name = "CPUUtilization"
-      namespace   = "AWS/RDS"
+      namespace   = local.cloudwatch_namespace
       period      = "60"
       stat        = "Maximum"
 
@@ -772,7 +763,7 @@ resource "aws_cloudwatch_metric_alarm" "master_oldest_replication_slot_lag" {
     return_data = "true"
     metric {
       metric_name = "OldestReplicationSlotLag"
-      namespace   = "AWS/RDS"
+      namespace   = local.cloudwatch_namespace
       period      = "60"
       stat        = "Maximum"
 
@@ -810,7 +801,7 @@ resource "aws_cloudwatch_metric_alarm" "master_db_connections" {
     return_data = "true"
     metric {
       metric_name = "DatabaseConnections"
-      namespace   = "AWS/RDS"
+      namespace   = local.cloudwatch_namespace
       period      = "60"
       stat        = "Maximum"
 
@@ -820,7 +811,6 @@ resource "aws_cloudwatch_metric_alarm" "master_db_connections" {
     }
   }
 }
-
 
 # FreeableMemory master anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "master_freeable_memory" {
@@ -849,7 +839,7 @@ resource "aws_cloudwatch_metric_alarm" "master_freeable_memory" {
     return_data = "true"
     metric {
       metric_name = "FreeableMemory"
-      namespace   = "AWS/RDS"
+      namespace   = local.cloudwatch_namespace
       period      = "60"
       stat        = "Maximum"
 
@@ -887,7 +877,7 @@ resource "aws_cloudwatch_metric_alarm" "master_swap_usage" {
     return_data = "true"
     metric {
       metric_name = "SwapUsage"
-      namespace   = "AWS/RDS"
+      namespace   = local.cloudwatch_namespace
       period      = "60"
       stat        = "Maximum"
 
@@ -897,7 +887,6 @@ resource "aws_cloudwatch_metric_alarm" "master_swap_usage" {
     }
   }
 }
-
 
 # FreeStorageSpace master anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "master_free_storage_space" {
@@ -926,7 +915,7 @@ resource "aws_cloudwatch_metric_alarm" "master_free_storage_space" {
     return_data = "true"
     metric {
       metric_name = "FreeStorageSpace"
-      namespace   = "AWS/RDS"
+      namespace   = local.cloudwatch_namespace
       period      = "60"
       stat        = "Maximum"
 
@@ -936,7 +925,6 @@ resource "aws_cloudwatch_metric_alarm" "master_free_storage_space" {
     }
   }
 }
-
 
 # DiskQueueDepth master anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "master_disk_queue_depth" {
@@ -965,7 +953,7 @@ resource "aws_cloudwatch_metric_alarm" "master_disk_queue_depth" {
     return_data = "true"
     metric {
       metric_name = "DiskQueueDepth"
-      namespace   = "AWS/RDS"
+      namespace   = local.cloudwatch_namespace
       period      = "60"
       stat        = "Maximum"
 
@@ -975,7 +963,6 @@ resource "aws_cloudwatch_metric_alarm" "master_disk_queue_depth" {
     }
   }
 }
-
 
 # NetworkTransmitThroughput master anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "master_network_transmit_throughput" {
@@ -1004,7 +991,7 @@ resource "aws_cloudwatch_metric_alarm" "master_network_transmit_throughput" {
     return_data = "true"
     metric {
       metric_name = "NetworkTransmitThroughput"
-      namespace   = "AWS/RDS"
+      namespace   = local.cloudwatch_namespace
       period      = "60"
       stat        = "Maximum"
 
@@ -1014,7 +1001,6 @@ resource "aws_cloudwatch_metric_alarm" "master_network_transmit_throughput" {
     }
   }
 }
-
 
 # NetworkReceiveThroughput master anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "master_network_receive_throughput" {
@@ -1043,7 +1029,7 @@ resource "aws_cloudwatch_metric_alarm" "master_network_receive_throughput" {
     return_data = "true"
     metric {
       metric_name = "NetworkReceiveThroughput"
-      namespace   = "AWS/RDS"
+      namespace   = local.cloudwatch_namespace
       period      = "60"
       stat        = "Maximum"
 
@@ -1053,7 +1039,6 @@ resource "aws_cloudwatch_metric_alarm" "master_network_receive_throughput" {
     }
   }
 }
-
 
 # TransactionLogsGeneration master anomaly alarm
 resource "aws_cloudwatch_metric_alarm" "master_transaction_logs_generation" {
@@ -1082,7 +1067,7 @@ resource "aws_cloudwatch_metric_alarm" "master_transaction_logs_generation" {
     return_data = "true"
     metric {
       metric_name = "TransactionLogsGeneration"
-      namespace   = "AWS/RDS"
+      namespace   = local.cloudwatch_namespace
       period      = "60"
       stat        = "Maximum"
 
@@ -1092,4 +1077,3 @@ resource "aws_cloudwatch_metric_alarm" "master_transaction_logs_generation" {
     }
   }
 }
-

@@ -3,6 +3,10 @@ data "aws_sns_topic" "topic" {
   name = var.sns_topic_name
 }
 
+locals{
+  cloudwatch_namespace = "AWS/RDS"
+}
+
 #------------------------------------------------------------------------------
 # Generate an rds instance event sub that publishes to the sns topic.
 resource "aws_db_event_subscription" "instance_sub" {
