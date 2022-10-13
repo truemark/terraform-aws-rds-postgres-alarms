@@ -6,7 +6,7 @@ Each alarm listed below is created by default. Creation can be disabled by setti
 Threshold alarms are included. Anomaly alarm creation can be disabled by setting the variable create_anomaly_alarms to false.
 
 
-- - master_checkpoint_lag_anomaly_alarm
+- master_checkpoint_lag_anomaly_alarm
 - master_checkpoint_lag_high_alarm
 - master_cpu_utilization_high_alarm
 - master_cpu_utilization_anomaly_alarm
