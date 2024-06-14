@@ -1,3 +1,5 @@
+## **⚠ NOTICE**: This project is deprecated has been replaced by [terraform-aws-database](https://github.com/truemark/terraform-aws-database). Please discontinue use of this module.
+
 # terraform-aws-rds-postgres-alarms
 This repo defines AWS RDS postgres specific alarm definitions (not Aurora). These alarms monitor postgres replication between master and replica.
 
